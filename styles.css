@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    overflow: hidden;
+  }
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #display {
+    grid-column: 1 / -1;
+    text-align: right;
+    padding: 15px;
+    font-size: 36px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #e4e4e4;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  button#clear {
+    background-color: #f45849;
+    color: #fff;
+  }
+  
+  button#equals {
+    background-color: #ff9500;
+    color: #fff;
+    grid-row: span 2;
+  }
+  
+  button#equals,
+  button#zero {
+    grid-column: span 2;
+  }
+  
+  button#decimal {
+    font-size: 28px;
+  }
+  
+  button#equals {
+    background-color: #ff9500;
+    color: #fff;
+  }
+  
+button#divide,
+button#multiply,
+button#subtract,
+button#add {
+  background-color: #a5a5a5;
+  color: #fff;
+}
+  
+  button#clear,
+  button#divide,
+  button#multiply,
+  button#subtract,
+  button#add,
+  button#equals {
+    box-shadow: none;
+  }
+  
+  button:active,
+  button.pressed {
+    background-color: #ccc;
+}
+
+  button#divide.pressed,
+  button#multiply.pressed,
+  button#subtract.pressed,
+  button#add.pressed,
+  button.operator.pressed {
+      background-color: #faa;
+  }
+
+  button#clear:active,
+  button#equals:active {
+    background-color: #333;
+  }
+
+  button:hover {
+    color: black;
+    outline: 0.05em solid grey;
+    z-index: 3;
+  }
